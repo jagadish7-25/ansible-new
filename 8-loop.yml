@@ -8,6 +8,5 @@
         name: "{{ item }}"
         state: presnet
       loop:
-        - git
-        - nginx
-        - maven
+        - postfix
+        - mysql
