@@ -2,12 +2,12 @@
 - name: ansible loops
   hosts: all
   become: true
-  loop:
-    - httpd
-    - nginx
-    - maven
   tasks: 
     - name: installing packages using loops
       ansible.bultin.package:
         name: {{ item }}
         state: presnet
+      loop:
+        - httpd
+        - nginx
+        - maven
