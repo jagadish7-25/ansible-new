@@ -1,0 +1,24 @@
+---
+- name: copying file to nginx folder
+  hosts: all
+  become: true
+  tasks:
+    - name: installing nginx
+      ansible.builtin.package:
+        name: ansible
+        state: present
+
+        
+    - name: startning nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: deleteing index.html package
+      ansible.builtin.command: rm -rf /usr/share/nginx/html/index.html
+
+    - name: copying the index file 
+      ansible.builtin.copy:
+        src: /root/ansible-new/index.html
+        dest: /usr/share/nginx/html/index.html

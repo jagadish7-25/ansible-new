@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You Page</title>
+    <style>
+        body {
+            background-color: #2c2c2c; /* Dark grey background */
+            color: #39ff14; /* Radium green text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .moving-text {
+            font-size: 3em;
+            text-transform: uppercase;
+            position: absolute;
+            animation: move 5s linear infinite;
+        }
+        @keyframes move {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="moving-text">Thank You, Jag</div>
+</body>
+</html>
