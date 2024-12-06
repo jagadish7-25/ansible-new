@@ -9,4 +9,4 @@
         state: "{{item.present}}"
       loop:
         - {name: 'postfix', state: 'present'}
-        - {name: 'mysql', state: 'presnet'}
+        - {name: 'mysql', state: 'present'}
