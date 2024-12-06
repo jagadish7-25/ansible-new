@@ -5,8 +5,8 @@
   tasks: 
     - name: installing packages using loops
       ansible.builtin.package:
-        name: "{{ item }}"
-        state: presnet
+        name: "{{ item.name }}"
+        state: "{{item.present}}"
       loop:
-        - postfix
-        - mysql
+        - {name: postfix, state: present}
+        - {name: mysql, state: presnet}
