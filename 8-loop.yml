@@ -5,9 +5,9 @@
   tasks: 
     - name: installing packages using loops
       ansible.bultin.package:
-        name: {{ item }}
+        name: "{{ item }}"
         state: presnet
       loop:
-        - httpd
+        - mysql
         - nginx
         - maven
