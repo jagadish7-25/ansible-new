@@ -1,0 +1,11 @@
+---
+- name: multiplay
+  hosts: all
+  become: true
+  tasks:
+    - name: multiplay using ansible
+      ansible.builtin.debug:
+        msg: "this is from multiplay"
+
+    - name: linux commands using shell in ansible
+      shell: netstat -lntp
