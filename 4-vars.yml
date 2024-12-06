@@ -1,0 +1,12 @@
+---
+- name: variables in ansible
+  hosts: all
+  become: true
+  vars:
+    a1: Spacey
+    a2: Space
+    a3: DevOps-aws
+  tasks:
+    - name: print the variables
+      ansible.builtin.debug:
+        msg: "hello this is {{ a1 }}, we are from {{ a2 }}, we teach {{ a3 }}"
