@@ -11,3 +11,7 @@
     - name: print the user 
       ansible.builtin.debug:
         msg: "user information is {{ user }}"
+
+    - name: creating user 
+      ansible.builtin.command: useradd jagadish
+      when: user.rc != 0
