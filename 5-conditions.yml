@@ -1,0 +1,13 @@
+---
+- name: ansible using condition
+  hosts: all
+  become: true
+  vars_prompt:
+    - name: number
+      prompt: please enter the number
+      private: false
+  tasks:
+    - name: print this if less than 10
+      ansible.builtin.debug:
+        msg: " given {{ number }} is less then 10"
+      when: number > 10
